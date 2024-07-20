@@ -47,8 +47,6 @@
 }
 
 .product {
-  @extend .section;
-
   padding-top: s.space(20);
   padding-bottom: s.space(20);
 }
@@ -57,6 +55,7 @@
   display: grid;
   gap: s.space(5);
   text-align: center;
+  align-items: center;
 }
 
 .product__title {
@@ -80,4 +79,24 @@
 
 .product__link {
   @include s.linkAction;
+}
+
+.product-big {
+  max-height: 700px;
+  height: 100vh;
+}
+
+.product--iphone-pro {
+  background-image: url('/img/iphone_pro.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: #000;
+}
+
+.product--dark {
+  .product__title,
+  .product__description {
+    color: s.color('background');
+  }
 }
