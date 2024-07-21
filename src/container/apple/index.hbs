@@ -41,18 +41,6 @@
         </header>
       {{/with}}
     </div>
-    <section class='section__ad'>
-      <section class='ad section__content'>
-        {{#with header.ad}}
-          <p class='ad__title'>{{title}}</p>
-
-          <a
-            href='{{link.url}}'
-            class='ad__link'
-          >{{link.text}}</a>
-        {{/with}}
-      </section>
-    </section>
   </div>
 
   <section class='product product-big product--iphone-pro product--dark product--top'>
@@ -70,6 +58,60 @@
         </div>
       </div>
     {{/with}}
+  </section>
+
+  <section class='product product-big product--iphone product--light product--top'>
+    {{#with iphone}}
+      <div class='product__content'>
+        <h1 class='product__title'>{{title}}</h1>
+        <p class='product__description'>{{descriptions}}</p>
+        <div class='product__action'>
+          {{#with link}}
+            {{#each text}}
+              <a href="{{../link}}" class="product__link">{{this}}</a>
+            {{/each}}
+          {{/with}}
+
+        </div>
+      </div>
+    {{/with}}
+  </section>
+
+  <section class="section__double">
+
+    <div>
+      <section class='product product-small product--trade_in product--light product--top'>
+    {{#with trade_in}}
+      <div class='product__content'>
+        <h1 class='product__title'>{{title}}</h1>
+        <p class='product__description'>{{descriptions}}</p>
+        <div class='product__action'>
+          {{#with link}}
+              <a href="{{link}}" class="product__link">{{text}}</a>
+          {{/with}}
+
+        </div>
+      </div>
+    {{/with}}
+      </section>
+    </div>
+
+    <div>
+      <section class='product product-small product--conference product--dark product--bottom'>
+    {{#with conference}}
+      <div class='product__content'>
+        <h1 class='product__title'>{{title}}</h1>
+        <p class='product__description'>{{descriptions}}</p>
+        <div class='product__action'>
+          {{#with link}}
+              <a href="{{link}}" class="product__link">{{text}}</a>
+          {{/with}}
+
+        </div>
+      </div>
+    {{/with}}
+      </section>
+    </div>
   </section>
 </div>
 
