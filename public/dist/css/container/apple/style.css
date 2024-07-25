@@ -1,30 +1,30 @@
-.section, .header, .product {
+.section, .header, .section_add, .product, .footer_section {
   display: flex;
   justify-content: center;
   padding: 0 16px;
 }
 
-.section__content, .header_content {
+.section__content, .header_content, .section_add_content, .footer_content {
   max-width: 1200px;
   width: 100%;
 }
 @media all and (width < 1440px) {
-  .section__content, .header_content {
+  .section__content, .header_content, .section_add_content, .footer_content {
     max-width: 1100px;
   }
 }
 @media all and (width < 1260px) {
-  .section__content, .header_content {
+  .section__content, .header_content, .section_add_content, .footer_content {
     max-width: 900px;
   }
 }
 @media all and (width < 1000px) {
-  .section__content, .header_content {
+  .section__content, .header_content, .section_add_content, .footer_content {
     max-width: 700px;
   }
 }
 @media all and (width < 620px) {
-  .section__content, .header_content {
+  .section__content, .header_content, .section_add_content, .footer_content {
     max-width: 500px;
   }
 }
@@ -41,7 +41,6 @@
 
 .header {
   display: flex;
-  flex-direction: column;
   background-color: #454545;
 }
 
@@ -74,6 +73,7 @@
   transition: opacity 0.7s;
   cursor: pointer;
   gap: 32px;
+  font-size: 12px;
 }
 .header__link:hover {
   opacity: 0.7s;
@@ -82,8 +82,25 @@
   opacity: 0.3s;
 }
 
-.header__link {
-  font-size: 12px;
+.section_add {
+  background-color: #f5f5f7;
+}
+
+.section_add_content {
+  display: flex;
+  padding: 16px 0;
+  justify-content: space-between;
+}
+
+.ad_title {
+  display: flex;
+  align-items: center;
+  color: #1d1d1f;
+  font-size: 14px;
+}
+
+.ad_link {
+  font-size: 14px;
 }
 
 .product__content {
@@ -208,11 +225,57 @@
   background-color: #000;
 }
 
+.product--iwatch {
+  background-image: url(/img/iwatch.png);
+  background-color: #000;
+}
+
+.product--ipad {
+  background-image: url(/img/ipad.png);
+  background-color: #fbfbfd;
+}
+
+.product--small_business {
+  background-image: url(/img/small_business.png);
+  background-color: #000;
+}
+
+.product--gift {
+  background-image: url(/img/gift.png);
+  background-color: #fbfbfd;
+}
+
+.product--card {
+  background-image: url(/img/card.png);
+  background-color: #fbfbfd;
+}
+
 .product-small .product__title {
   font-size: 40px;
 }
 .product-small .product__description {
   font-size: 20px;
+}
+
+.footer_section {
+  background-color: #f5f5f7;
+}
+
+.footer_content {
+  display: flex;
+  padding: 40px 0;
+  justify-content: space-between;
+}
+
+.footer_block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer_title {
+  font-size: 12px;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
