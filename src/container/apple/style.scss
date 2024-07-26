@@ -42,6 +42,7 @@
   display: flex;
   padding: s.space(4) 0;
   justify-content: space-between;
+  gap: 12px;
 }
 
 .ad_title {
@@ -182,6 +183,7 @@ $productImage: (
   display: flex;
   padding: s.space(10) 0;
   justify-content: space-between;
+  gap: 12px;
 }
 
 .footer_block {

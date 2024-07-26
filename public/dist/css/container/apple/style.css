@@ -90,6 +90,7 @@
   display: flex;
   padding: 16px 0;
   justify-content: space-between;
+  gap: 12px;
 }
 
 .ad_title {
@@ -265,6 +266,7 @@
   display: flex;
   padding: 40px 0;
   justify-content: space-between;
+  gap: 12px;
 }
 
 .footer_block {
